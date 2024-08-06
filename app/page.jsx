@@ -208,16 +208,17 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+         <p className={`m-0 max-w-[30ch] text-sm ${darkMode ? "text-white" : "text-gray-900"}`}>
           <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/icons8-android-os.svg"
-          alt="Familiaplan android Logo"
-          width={130}
-          height={130}
-          priority
-        />
-          </p>
+            className={`relative ${darkMode ? "" : "dark:invert"}`}
+            src="/icons8-android-os.svg"
+            alt="Familiaplan Android Logo"
+            width={130}
+            height={130}
+            priority
+          />
+        </p>
+
         </a>
 
         <a
@@ -232,9 +233,9 @@ export default function Home() {
               -&gt;
             </span>
           </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
+         <p className={`m-0 max-w-[30ch] text-sm ${darkMode ? "text-white" : "text-gray-900"}`}>
           <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            className={`relative ${darkMode ? "" : "dark:invert"}`}
           src="/icons8-ios.svg"
           alt="Familiaplan ios Logo"
           width={130}
