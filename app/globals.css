@@ -31,3 +31,17 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Light Mode */
+.image-icon {
+  filter: none;
+  fill: black;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .image-icon {
+    filter: brightness(0) invert(1);
+    fill: white;
+  }
+}
