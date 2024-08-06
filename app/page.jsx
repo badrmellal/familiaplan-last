@@ -3,7 +3,7 @@
 import Image from "next/image";
 import CustomCarousel from "./components/custom-carousel";
 import Gridlayer from "./components/gridlayer";
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Contact from './components/contact'
@@ -25,7 +25,12 @@ const images = [
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  
+  const [darkMode, setDarkMode] = useState(false);
+
+useEffect(() => {
+  setDarkMode(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+}, []);
+
 
   return (
     <div className="bg-white">
